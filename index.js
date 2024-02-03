@@ -18,7 +18,6 @@ const initializeServer = async () => {
     res.json({ success: "Express" });
   });
 
-  app.listen(PORT, async () => {
     /**
      * Configures Affinidi authentication provider.
      * @param {Express} app - The Express app instance
@@ -101,6 +100,7 @@ const initializeServer = async () => {
       });
     });
 
+  app.listen(PORT, async () => {
     console.log(`Server listening on ${PORT}`);
   });
 };
