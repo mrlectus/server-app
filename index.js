@@ -33,7 +33,7 @@ const initializeServer = async () => {
     issuer: process.env.AFFINIDI_ISSUER,
     client_id: process.env.AFFINIDI_CLIENT_ID,
     client_secret: process.env.AFFINIDI_CLIENT_SECRET,
-    redirect_uris: ["https://affinidi-capstone-beta.vercel.app/auth/callback/"],
+    redirect_uris: ["https://main--incandescent-valkyrie-50314c.netlify.app/auth/callback/"],
   });
 
   /**
