@@ -14,6 +14,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3003;
 
 const initializeServer = async () => {
+  console.log(process.env, "process.env");
   app.get("/", function (req, res, next) {
     res.json({ success: "Express" });
   });
@@ -33,7 +34,7 @@ const initializeServer = async () => {
     issuer: process.env.AFFINIDI_ISSUER,
     client_id: process.env.AFFINIDI_CLIENT_ID,
     client_secret: process.env.AFFINIDI_CLIENT_SECRET,
-    redirect_uris: ["https://main--incandescent-valkyrie-50314c.netlify.app/auth/callback/"],
+    redirect_uris: ["https://affinidi-capstone-atpzl38zp-mrlectus.vercel.app//auth/callback/"],
   });
 
   /**
