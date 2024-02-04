@@ -34,7 +34,7 @@ const initializeServer = async () => {
     issuer: process.env.AFFINIDI_ISSUER,
     client_id: process.env.AFFINIDI_CLIENT_ID,
     client_secret: process.env.AFFINIDI_CLIENT_SECRET,
-    redirect_uris: ["https://affinidi-capstone-atpzl38zp-mrlectus.vercel.app//auth/callback/"],
+    redirect_uris: ["http://127.0.0.1:3000/auth/callback/"],
   });
 
   /**
