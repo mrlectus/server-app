@@ -6,7 +6,7 @@ import nodemailer from "nodemailer";
 
 import cors from "cors";
 
-var app = express();
+const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
@@ -34,7 +34,10 @@ const initializeServer = async () => {
     issuer: process.env.AFFINIDI_ISSUER,
     client_id: process.env.AFFINIDI_CLIENT_ID,
     client_secret: process.env.AFFINIDI_CLIENT_SECRET,
-    redirect_uris: ["http://127.0.0.1:3000/auth/callback"],
+    redirect_uris: ["http://localhost:3000/auth/callback"],
+    handleCredential: (credential) => {
+      console.log("my cred: ", credential);
+    },
   });
 
   /**
