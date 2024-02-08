@@ -36,6 +36,7 @@ const initializeServer = async () => {
    */
 
   app.post("/send", async (req, res) => {
+    try {
     const { message, email } = req.body;
     let transporter = nodemailer.createTransport({
       host: "smtp.mailgun.org",
@@ -55,7 +56,10 @@ const initializeServer = async () => {
     res.send({
       message: "mail has been sent, please check you spam",
       id: info.messageId,
-    });
+      });
+    } catch (error) {
+      throw error;
+    }
   });
 
   app.listen(PORT, async () => {
