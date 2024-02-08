@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start index.js --watch --ignore-watch='node_modules'"
+    "preinstall": "npm I -g pm2",
+    "start": "pm2-runtime start index.js -i 1"
   },
   "keywords": [],
   "author": "",
